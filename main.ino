@@ -10,7 +10,8 @@ class RELAY{
     RELAY(int p, long st, long on, long off){
         pin = p;
         pinMode(p, OUTPUT);
-  
+        digitalWrite(p, HIGH);
+        
         startTime = st*100;
         onTime    = on*100;
         offTime   = off*100;
@@ -31,17 +32,18 @@ class RELAY{
     }
 };
 
-RELAY relay1(9, 00, 10, 10);
-RELAY relay2(8, 20, 12, 12);
-RELAY relay3(7, 40, 10, 10);
-RELAY relay4(6, 40, 30, 10);
-RELAY relay5(5, 60, 20, 20);
-RELAY relay6(4, 60, 30, 30);
-RELAY relay7(3, 70, 15, 10);
-RELAY relay8(2, 70, 30, 10);
+RELAY relay1(9,   0, 10, 10);
+RELAY relay2(8, 100, 10, 10);
+RELAY relay3(7, 100, 11, 11);
+RELAY relay4(6, 140,  3,  3);
+RELAY relay5(5, 160,  2,  2);
+RELAY relay6(4, 160,  7,  3);
+RELAY relay7(3, 170, 20, 20);
+RELAY relay8(2, 170, 30, 10);
 
 void setup() {
     Serial.begin(9600);
+
 }
 
 void loop() {
@@ -53,4 +55,5 @@ void loop() {
     relay6.Update();
     relay7.Update();
     relay8.Update();
+
 }
