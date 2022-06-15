@@ -1,5 +1,6 @@
 class RELAY{
     int pin;
+    // initiate strat time of blinking relay
     unsigned long startTime;
     unsigned long onTime;
     unsigned long offTime;
@@ -12,9 +13,9 @@ class RELAY{
         pinMode(p, OUTPUT);
         digitalWrite(p, HIGH);
         
-        startTime = st*100;
-        onTime    = on*100;
-        offTime   = off*100;
+        startTime = st  * 100;
+        onTime    = on  * 100;
+        offTime   = off * 100;
         prevTime  = 0;        
     }
 
