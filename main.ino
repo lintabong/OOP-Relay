@@ -33,6 +33,7 @@ class RELAY{
     }
 };
 
+// ok
 RELAY relay1(9,   0, 10, 10);
 RELAY relay2(8, 100, 10, 10);
 RELAY relay3(7, 100, 11, 11);
