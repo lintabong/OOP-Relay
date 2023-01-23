@@ -1,6 +1,6 @@
 class RELAY{
     int pin;
-    // initiate strat time of blinking relay
+    // initiate variable of relay
     unsigned long startTime;
     unsigned long onTime;
     unsigned long offTime;
